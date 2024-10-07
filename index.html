@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE BOX</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+
+</head>
+<body>
+
+    <div id="logo-container">
+        <img src="logo.png" alt="COLEGIO CIVICO MILITAR - PR" id="logo">
+
+    </div>
+
+    <h1>THE BOX</h1>
+  
+    <div id="name-input-container">
+        <input type="text" id="name-input" placeholder="Digite seu nome">
+    </div>
+    <div class="status-container">
+        <div id="score">Pontuação: 0</div>
+        <div id="timer">Tempo: 30 s</div>
+    </div>
+    <!-- Barra de progresso do tempo -->
+    <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+    </div>
+    <div id="game-container">
+        <div id="box"></div>
+        <div id="countdown"></div>
+    </div>
+    <div class="buttons-container">
+        <button id="play-button">Play</button>
+        <button id="restart-button" style="display: none;">Recomeçar</button>
+    </div>
+    <div id="ranking-container">
+        <h2>Ranking Local</h2>
+        <ol id="ranking-list"></ol>
+    </div>
+    <button id="instructions-button">Instruções</button>
+    <div id="instructions">
+        <div id="instructions-content">
+            <h2>Instruções</h2>
+            <p>Clique na caixa azul para ganhar pontos. A cada clique, a caixa se move para um local aleatório.</p>
+            <p>Você tem 30 segundos para fazer o máximo de pontos possível. Boa sorte!</p>
+            <button id="instructions-close">Fechar</button>
+        </div>
+    </div>
+    <div id="stats">
+        <div id="stats-content">
+            <h2>Estatísticas</h2>
+            <p id="final-score">Pontuação Final: 0</p>
+            <p id="clicks-per-second">Cliques por Segundo: 0.00</p>
+            <button id="stats-close">Fechar</button>
+        </div>
+    </div>
+     <footer style="text-align: center; padding: 20px; font-family: Arial, sans-serif;">
+        <p>Criado por Murilo - THE BOX &copy; 2024</p>
+        <p>Todos os direitos reservados.</p>
+    </footer>
+    
+    <!-- Adiciona os elementos de áudio -->
+    <audio id="click-sound" src="select-sound-121244.mp3"></audio>
+    <audio id="countdown-sound" src="race-start-beeps-125125.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

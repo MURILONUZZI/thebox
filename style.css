@@ -1,0 +1,240 @@
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        transform: scale(1.1);
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+}
+@media (max-width: 768px) {
+    #logo {
+        width: 80px; /* Ajusta o tamanho do logo para telas menores */
+    }
+}
+
+h1 {
+    font-size: 48px;
+    color: #333;
+    animation: pulse 2s infinite;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('fundosite.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 48px;
+    color: #333;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#instructions, #stats {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#instructions-content, #stats-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+#instructions-content h2, #stats-content h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+#instructions-content p, #stats-content p {
+    font-size: 18px;
+    color: #555;
+}
+
+#instructions-close, #stats-close {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#game-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #000000;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#box {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    transition: transform 0.1s ease-in-out; /* Duração da transição reduzida para 0.3s */
+}
+
+#box:active {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.status-container {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin-bottom: 10px;
+}
+
+#play-button,
+#restart-button,
+#instructions-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+#instructions-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: bold;
+    color: #333;
+    display: none;
+}
+
+#ranking-container {
+    width: 600px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #000;
+}
+
+#ranking-container h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#ranking-list {
+    list-style-type: decimal;
+    padding-left: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+#ranking-list li {
+    margin: 5px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#ranking-list li:last-child {
+    border-bottom: none;
+}
+
+#name-input-container {
+    margin-bottom: 20px;
+}
+
+#name-input {
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.buttons-container {
+    margin-bottom: 20px;
+}
+
+/* Estilos para a barra de progresso */
+#progress-bar-container {
+    width: 600px;
+    height: 30px;
+    background-color: #ddd;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#progress-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 5px;
+}
+
+#logo-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000; /* Garante que o logo esteja acima de outros elementos */
+}
+
+#logo {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+button {
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+button:active {
+    transform: scale(0.95); /* Reduz o tamanho do botão */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra */
+}
